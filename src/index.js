@@ -9,7 +9,9 @@ import user_controller from "./components/user_controller";
 ReactDOM.render(
 
 <BrowserRouter>
+<Provider store ={store}>
 <App />
+</Provider>
 </BrowserRouter>
 
 
