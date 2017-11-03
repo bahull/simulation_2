@@ -1,2 +1,2 @@
 INSERT INTO Users (username,password)
-VALUES (username,password);
+VALUES ($1,$2);

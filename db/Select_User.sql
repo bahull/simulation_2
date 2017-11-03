@@ -1,2 +1,2 @@
 SELECT * FROM Users
-WHERE username = username and password = password;
+WHERE username = $1 and password = $2;
