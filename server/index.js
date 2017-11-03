@@ -3,12 +3,16 @@ const { json } = require("body-parser");
 const cors = require("cors");
 const session = require("express-session");
 const massive = require("massive");
-
+require("dotenv").config();
 const { secret } = require("./config");
 const app = express();
 
 //Controllers
-const user_controller = require("../src/components/user_controller");
+const userController = require("../src/components/user_controller");
+
+massive(process.env.CONNECTION_STRING).then(db => {
+  app.set("db", db);
+});
 
 app.use(json());
 app.use(cors());
@@ -22,9 +26,9 @@ app.use(
   })
 );
 
-app.post("/api/login", user_controller.login);
-app.post("/api/signup", user_controller.register);
-app.get("/api/logout", user_controller.logout);
+app.post("/api/login", userController.login);
+app.post("/api/signup", userController.register);
+app.get("/api/logout", userController.logout);
 
 const port = 3001;
 
