@@ -23,7 +23,7 @@ import { login }  from './actions/login'
     <input className="psw" onChange={e => this.props.updatePassword(e.target.value)} /> 
 
     <button type="submit">Login</button>
-    <button type="submit" onClick={login}>Register</button>
+    <button type="submit" onClick={() => login(this.state.username, this.state.password)}>Register</button>
     
   </div>
 
