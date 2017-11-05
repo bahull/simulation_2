@@ -1,0 +1,70 @@
+.container-background {
+    margin: auto;
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(227, 243, 235);
+    padding: 20px;
+    border: 0;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+button:hover{
+    cursor: pointer;
+}
+.new-property {
+    background-color: rgb(141,233, 149);
+    height: 45px;
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    color: black;
+    font-weight: 700;
+    font-family: sans-serif;
+    
+    }
+.nav-filter{
+    display: flex;
+    align-items: center;
+     margin-bottom: 20px;
+}
+#filter-button{
+    width: 75px;
+    height: 35px;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    margin-right:10px;
+    background-color: rgb(138, 234, 146);
+    color: black;
+}
+#reset-button{
+    width: 75px;
+    height: 35px;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    margin-left:10px;
+    background-color: rgb(59, 82, 73);
+    color: white;
+    margin-right: 0;
+}
+#filter-input{
+    width: 73px;
+    height: 30px;
+    border: 1px solid rgb(81, 152, 114);
+    border-radius: 3px;
+    font-size: 18px;
+}
+#nav-p-text {
+    font-size: 20px;
+    margin-right: 8px;
+
+}
+
+.listings {
+    text-align:left;
+}

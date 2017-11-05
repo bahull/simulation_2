@@ -30,6 +30,8 @@ app.post("/api/login", userController.login);
 app.post("/api/signup", userController.register);
 app.get("/api/logout", userController.logout);
 
+app.get("/api/properties", userController.getAll);
+
 const port = 3001;
 
 app.listen(port, () => {

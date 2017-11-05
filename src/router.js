@@ -12,7 +12,7 @@ import Dashboard from './components/Dashboard';
 import {Switch} from 'react-router-dom';
 
 export default (
-<Switch>
+<Switch >
     
     <Route component={Header} exact path = '/'/>
 
