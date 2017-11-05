@@ -12,12 +12,12 @@ export default class WizardTail extends Component {
                     <button className = "next-button1" >Next Step</button>
                     </Link>
               }{
-                 this.props.path === "2" && <div>
+                this.props.path === "2" && <div>
                 <Link to="/wizard/1"> 
                     <button className = "next-button" >Previous Step</button>
                   </Link>
                   <Link to="/wizard/3"> 
-                        <button className = "next-button2" >Next Step</button>
+                        <button className = "next-button" >Next Step</button>
                 </Link>
                 </div>
                 }{

@@ -28,3 +28,11 @@ export const signUp = (username, password) => {
         }
 }
 
+// export const filter = (desiredRent) => {
+//     if (desiredRent.length > 0){
+//         axios.post('/api/filtered', {desiredRent})
+//         .then(res.)
+//     } else {
+//        return  " "
+//     }
+// }

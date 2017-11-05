@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Nav from './Nav'
 import WizardHead from './WizardHead';
-import WizardTail from './wizardTail.css';
+import WizardTail from './WizardTail';
 
 export default class WizardTwo extends Component {
     render() {

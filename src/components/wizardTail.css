@@ -4,10 +4,7 @@
     background-color: rgb(59, 82, 73);
     color: white;
     padding: 5px 5px;
-    display: flex;
-    justify-content: space-around;
-    display: inline;
-
+    margin: 20px 100px 10px 100px;
 }
 .complete-button{
     width: 130px;
@@ -15,6 +12,7 @@
     background-color: rgb(138, 234, 146);
     color: black;
     padding: 10px 30px;
+    margin: 20px 100px 10px 100px;
     
 }
 .next-button1{
@@ -23,14 +21,11 @@
     background-color: rgb(59, 82, 73);
     color: white;
     padding: 10px 30px;
-    margin: auto;
+    margin: 20px 100px 20px 10p;
     
 }
 .tail-container {
-    display: flex;
-    justify-content: space-between;
     height: 100%;
     width: 100%;
-    
-
 }
+.flexed{}
