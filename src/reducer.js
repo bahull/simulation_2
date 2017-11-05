@@ -11,6 +11,7 @@ const UPDATE_IMAGEURL= 'UPDATE_IMAGEURL';
 const UPDATE_LOANAMOUNT= 'UPDATE_LOANAMOUNT';
 const UPDATE_MONTHLYMORTGAGE= 'UPDATE_MONTHLYMORTGAGE';
 const UPDATE_DESIREDRENT= 'UPDATE_DESIREDRENT';
+const RESET_FILTER="RESET_FILTER";
 
 
 //ACTION BUILDERS
@@ -20,9 +21,16 @@ export function updateUsername(username) {
         payload : username //es6 shortcut for assigning a variable to an object with the same property name as the variable name
     }};
 
-export function updatePassword(password){return {
+export function updatePassword(password){
+    return {
     type: UPDATE_PASSWORD,
     payload : password
+}};
+
+export function resetFilter(){
+    return {
+    type: RESET_FILTER,
+    payload: 0
 }};
 
 export function updatePropertyName(propertyName){
@@ -97,7 +105,8 @@ let initialState = {
     imageUrl: '',
     loanAmount: '',
     monthlyMortgage: '',
-    desiredRent: ''
+    desiredRent: '',
+    filter: 0
 }
 //REDUCER
 export default function (state = initialState, action) {
@@ -126,6 +135,10 @@ export default function (state = initialState, action) {
             return Object.assign({}, state, { monthlyMortgage: action.payload });
         case UPDATE_DESIREDRENT:
             return Object.assign({}, state, { desiredRent: action.payload });
+        case RESET_FILTER:
+            return Object.assign({}, state, { desiredRent: action.payload });
+        default:
+            return state;
  }
 
     return state;

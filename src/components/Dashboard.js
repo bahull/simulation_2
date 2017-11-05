@@ -2,11 +2,13 @@ import React,  { Component } from 'react';
 import './dashboard.css';
 import { Link } from 'react-router-dom';
 
+import { updateDesiredRent } from './../reducer';
+
 import { connect } from 'react-redux';
 import Nav from './Nav'
-export default class Dashboard extends Component {
+class Dashboard extends Component {
     render() {
-      
+      console.log(this.props.desiredRent);
   
       return (
             <div>
@@ -17,7 +19,7 @@ export default class Dashboard extends Component {
             </Link>
                 <div className='nav-filter'>
                 <p id='nav-p-text'>List properties with "desired rent" greater than: $</p>
-                    <input id='filter-input' type='text' placeholder='0'/>
+                    <input id='filter-input' type='text' placeholder={this.props.desiredRent}/>
                 <button id='filter-button'>Filter</button>
                 <button id='reset-button'>Reset</button>
                 </div>
@@ -31,3 +33,10 @@ export default class Dashboard extends Component {
             </div>
       )}
     }
+    const mapStateToProps = ( state ) => {
+        return {
+          desiredRent: state.desiredRent,
+        }
+      }
+      
+      export default connect(mapStateToProps, { updateDesiredRent })(Dashboard);
