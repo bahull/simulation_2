@@ -19,8 +19,8 @@ class Dashboard extends Component {
             </Link>
                 <div className='nav-filter'>
                 <p id='nav-p-text'>List properties with "desired rent" greater than: $</p>
-                    <input id='filter-input' type='text' placeholder={this.props.desiredRent}/>
-                <button id='filter-button'>Filter</button>
+                    <input id='filter-input' type='text' placeholder="0" onChange={e => this.props.updateDesiredRent(e.target.value)}/>
+                <button id='filter-button' >Filter</button>
                 <button id='reset-button'>Reset</button>
                 </div>
 <hr />

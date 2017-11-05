@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Nav from './Nav'
 import WizardHead from './WizardHead';
+import WizardTail from './WizardTail';
 
 export default class WizardFive extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class WizardFive extends Component {
        <Nav />
    <div className='container-back1'>
       <WizardHead path={this.props.match.path.charAt(8)}/>
+      <WizardTail  path={this.props.match.path.charAt(8)}/>
    
       </div>
           </div>
