@@ -13,7 +13,7 @@ import WizardTail from './WizardTail'
  class WizardOne extends Component {
     render() {
       console.log(
-        this.props.match.params)
+        this.props.propertyDescript, this.props.propertyName)
 
   
       return (<div >
@@ -23,7 +23,7 @@ import WizardTail from './WizardTail'
         <h4> Property Name </h4>
         <input className="propertyName" onChange={ (e) => {this.props.updatePropertyName (e.target.value)}}/> 
         <h4> Property Description </h4>
-        <input className="propertyDescription" onChange={ (e) =>{this.props.updatePropertyDescript(e.target.value)}}/> 
+        <textarea className="propertyDescription" onChange={ (e) =>{this.props.updatePropertyDescript(e.target.value)}}/> 
         <WizardTail path={this.props.match.path.charAt(8)}/>
       </div>
   

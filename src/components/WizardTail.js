@@ -4,11 +4,13 @@ import './wizardTail.css';
 
 class WizardTail extends Component {
     render() {
-        console.log("hello");
+        console.log(this.props.path + 1);
         return (
             <div className='tail-container'>
                 {this.props.path === "1" && 
+                <Link to="/wizard/2"> 
                     <button className = "next-button" >Next Step</button>
+                    </Link>
                  }
             </div>
         );
