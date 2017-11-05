@@ -1,0 +1,20 @@
+.theFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addListingHead {
+    text-align: left;
+    margin-top:0;
+    font-size: 27px;
+}
+.cancelButton {
+    background-color: rgb(254, 194, 194);
+    color: black;
+    font-size: 15px;
+    width: 9%;
+    height: 35px;
+    font-weight: 700;
+    margin: 0;
+    padding: 4px;
+}

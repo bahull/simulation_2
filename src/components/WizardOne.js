@@ -1,16 +1,24 @@
 import React,  { Component } from 'react';
 import { Link } from 'react-router-dom';
-import {updatePropertyName} from './../reducer';
-import {updatePropertyDescript} from './../reducer';
+import { updatePropertyName } from './../reducer';
+import { updatePropertyDescript } from './../reducer';
 import { connect } from 'react-redux';
+import Nav from './Nav'
+import './wizardOne.css';
+
+import WizardHead from './WizardHead';
 
 
  class WizardOne extends Component {
     render() {
-      console.log(this.props.propertyName, this.props.propertyDescript)
+      console.log(
+        this.props.match.path )
+
   
-      return (<div>
-        <div className="wizard">
+      return (<div >
+       <Nav />
+   <div className='container-back1'>
+      <WizardHead />
         <h4> Property Name </h4>
         <input className="propertyName" onChange={ (e) => {this.props.updatePropertyName (e.target.value)}}/> 
         <h4> Property Description </h4>
