@@ -10,6 +10,7 @@ import { login, signUp }  from './actions/login'
 
  class Header extends Component {
     render() {
+      console.log(this.props.username)
       return ( <div>
         
    <div className="imgcontainer">
@@ -22,7 +23,7 @@ import { login, signUp }  from './actions/login'
     <input className="uname" onChange={e => this.props.updateUsername(e.target.value)} />
 
     <h3 className="left-text"><b>Password</b></h3>
-    <input className="psw" onChange={e => this.props.updatePassword(e.target.value)} /> 
+    <input className="psw" type='password' onChange={e => this.props.updatePassword(e.target.value)} /> 
 
     <button type="submit" className="login" onClick={() => login(this.props.username, this.props.password)}>Login</button>
     

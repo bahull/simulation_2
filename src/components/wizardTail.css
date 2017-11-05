@@ -3,5 +3,34 @@
     height: 38px;
     background-color: rgb(59, 82, 73);
     color: white;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-around;
+    display: inline;
+
+}
+.complete-button{
+    width: 130px;
+    height: 38px;
+    background-color: rgb(138, 234, 146);
+    color: black;
     padding: 10px 30px;
+    
+}
+.next-button1{
+    width: 130px;
+    height: 38px;
+    background-color: rgb(59, 82, 73);
+    color: white;
+    padding: 10px 30px;
+    margin: auto;
+    
+}
+.tail-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    
+
 }

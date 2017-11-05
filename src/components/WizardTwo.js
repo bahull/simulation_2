@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Nav from './Nav'
 import WizardHead from './WizardHead';
+import WizardTail from './wizardTail.css';
 
 export default class WizardTwo extends Component {
     render() {
       
   
-      return (<div >
+      return (<div>
         <Nav />
     <div className='container-back1'>
        <WizardHead path={this.props.match.path.charAt(8)}/>
-    
+       <WizardTail path={this.props.match.path.charAt(8)} />
        </div>
            </div>
       )}
