@@ -14,7 +14,7 @@ img{
 
 .content {
     display: flex;  
-    width: 50%;
+    width: 56%;
     margin: auto;
     justify-content: space-between
 }
@@ -35,6 +35,8 @@ img{
 
 #nav-logout{
     font-size: 17px;
+    position: relative;
+    right: 40px;
 }
 
 .nav-left{

@@ -7,25 +7,28 @@ import Nav from './Nav'
 import './wizardOne.css';
 
 import WizardHead from './WizardHead';
+import WizardTail from './WizardTail'
 
 
  class WizardOne extends Component {
     render() {
       console.log(
-        this.props.match.path )
+        this.props.match.params)
 
   
       return (<div >
        <Nav />
    <div className='container-back1'>
-      <WizardHead />
+      <WizardHead path={this.props.match.path.charAt(8)}/>
         <h4> Property Name </h4>
         <input className="propertyName" onChange={ (e) => {this.props.updatePropertyName (e.target.value)}}/> 
         <h4> Property Description </h4>
         <input className="propertyDescription" onChange={ (e) =>{this.props.updatePropertyDescript(e.target.value)}}/> 
-        
+        <WizardTail path={this.props.match.path.charAt(8)}/>
       </div>
+  
           </div>
+          
       )}
     }
     const mapStateToProps = ( state ) => {

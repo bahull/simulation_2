@@ -15,8 +15,9 @@ export const login =(username, password) => {
     } else { 
         alert("Give me cookie!")
     }
+};
 
-     }
+
 export const signUp = (username, password) => {
     if (username.length > 0 && password.length > 0){
     axios.post('/api/signup', {username, password})
