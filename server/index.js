@@ -32,6 +32,8 @@ app.get("/api/logout", userController.logout);
 
 app.get("/api/properties", userController.getAll);
 
+app.post("/api/addProp", userController.addProp);
+
 const port = 3001;
 
 app.listen(port, () => {

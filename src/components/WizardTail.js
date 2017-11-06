@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './wizardTail.css';
 
+import { complete } from './actions/login';
+
+
 export default class WizardTail extends Component {
     render() {
         return (
@@ -44,8 +47,17 @@ export default class WizardTail extends Component {
                     <button className = "next-button" >Previous Step</button>
                   </Link>
                   <Link to="/Dashboard"> 
-                        <button className = "complete-button" onClick="" >Complete</button>
-                </Link>
+                        <button className = "complete-button" onClick={() => complete(this.props.propertyName,
+                                                                                    this.props.propertyDescript,
+                                                                                    this.props.address,
+                                                                                    this.props.city,
+                                                                                    this.props.state,
+                                                                                    this.props.zip,
+                                                                                    this.props.imageUrl,
+                                                                                    this.props.loanAmount,
+                                                                                    this.props.monthlyMortgage,
+                                                                                    this.props.desiredRent) } >Complete</button>
+                                                                                    </Link>
                 </div>
                 }
             </div>

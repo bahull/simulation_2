@@ -1,0 +1,31 @@
+
+#address{
+    width: 70%;
+    font-size: 15px;
+    border-radius: 2px;
+    border:1px solid #519872;
+}
+.flexed-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cityState {    
+    width: 30%;
+    height: 20px;
+    font-size: 15px;
+    border-radius: 2px;
+    border:1px solid #519872;
+    margin: 10px 25px;
+}
+
+.headers1 {
+    display: inline-block;
+}
+.zip{
+    margin: 10px;
+    width: 70%;
+    font-size: 15px;
+    border-radius: 2px;
+    border:1px solid #519872;
+}

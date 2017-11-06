@@ -1,0 +1,32 @@
+.imageUrl{
+
+    width: 70%;
+    font-size: 15px;
+    border-radius: 2px;
+    border:1px solid #519872;
+    margin: auto;
+}
+
+#image-display {
+    width: 70%;
+    height: 300px;
+    border-radius: 2px;
+    border:1px solid #519872;
+    margin: 20px auto; 
+    background-color: rgb(222, 222, 222);
+    color: rgb(178, 178, 178);
+    text-align: center;
+    
+
+}
+#image-display img{
+    height: 100px;
+    width: 100px;
+}
+#image-display p{
+    margin-top: 25%;
+}
+
+#header-image{
+
+}

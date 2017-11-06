@@ -37,5 +37,30 @@ module.exports = {
     .then(result => {
       res.status(200).send(result)
     }).catch(() => res.status(500).send());
+  },
+
+  addProp: (req, res, next) => {
+    const db = req.app.get('db');
+    const {  propertyName, propertyDescript,
+      address,
+      city,
+      state,
+      zip,
+      imageUrl,
+      loanAmount,
+      monthlyMortgage,
+      desiredRent} = req.body;
+    db.add_prop([propertyName, propertyDescript,
+      address,
+      city,
+      state,
+      zip,
+      imageUrl,
+      loanAmount,
+      monthlyMortgage,
+      desiredRent])
+    .then(result => {
+      res.status(200).send()
+    }).catch(() => res.status(500).send());
   }
 };

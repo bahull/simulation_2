@@ -36,3 +36,29 @@ export const signUp = (username, password) => {
 //        return  " "
 //     }
 // }
+
+
+export const complete = (
+propertyName, propertyDescript,
+address,
+city,
+state,
+zip,
+imageUrl,
+loanAmount,
+monthlyMortgage,
+desiredRent) => {
+ axios.post('/api/addProp',
+ {
+    propertyName, propertyDescript,
+    address,
+    city,
+    state,
+    zip,
+    imageUrl,
+    loanAmount,
+    monthlyMortgage,
+    desiredRent
+}).then(res  => res.status(200).send())
+.catch(err => console.log(err))
+}
