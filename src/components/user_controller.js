@@ -5,7 +5,8 @@ module.exports = {
       .createUser([req.body.username, req.body.password])
       .then(result => {
         res.json(result);
-      }).catch((error) => console.log(error));
+      })
+      .catch(error => console.log(error));
     // const dbInstance = req.app.get("db");
     // const { username, password } = req.body;
     // const { params } = req;
@@ -20,11 +21,12 @@ module.exports = {
     dbInstance
       .Select_User([req.body.username, req.body.password])
       .then(answer => {
-        if (answer.length > 0){
-          res.status(200).send("Authenticated")
+        if (answer.length > 0) {
+          res.status(200).send("Authenticated");
         } else {
-          res.status(200).send('Unknown')
-        }})
+          res.status(200).send("Unknown");
+        }
+      })
       .catch(() => res.status(500).send("Not Valid"));
   },
   logout: (req, res, next) => {
@@ -32,16 +34,20 @@ module.exports = {
   },
 
   getAll: (req, res, next) => {
-    const db = req.app.get('db');
-    db.select_all()
-    .then(result => {
-      res.status(200).send(result)
-    }).catch(() => res.status(500).send());
+    const db = req.app.get("db");
+    db
+      .select_all()
+      .then(result => {
+        res.status(200).send(result);
+      })
+      .catch(() => res.status(500).send());
   },
 
   addProp: (req, res, next) => {
-    const db = req.app.get('db');
-    const {  propertyName, propertyDescript,
+    const db = req.app.get("db");
+    const {
+      propertyName,
+      propertyDescript,
       address,
       city,
       state,
@@ -49,18 +55,24 @@ module.exports = {
       imageUrl,
       loanAmount,
       monthlyMortgage,
-      desiredRent} = req.body;
-    db.add_prop([propertyName, propertyDescript,
-      address,
-      city,
-      state,
-      zip,
-      imageUrl,
-      loanAmount,
-      monthlyMortgage,
-      desiredRent])
-    .then(result => {
-      res.status(200).send()
-    }).catch(() => res.status(500).send());
+      desiredRent
+    } = req.body;
+    db
+      .add_prop([
+        propertyName,
+        propertyDescript,
+        address,
+        city,
+        state,
+        zip,
+        imageUrl,
+        loanAmount,
+        monthlyMortgage,
+        desiredRent
+      ])
+      .then(result => {
+        res.status(200).send();
+      })
+      .catch(() => res.status(500).send());
   }
 };
